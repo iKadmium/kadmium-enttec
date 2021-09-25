@@ -25,7 +25,7 @@ namespace Kadmium_Enttec
 		private const int MAX_PACKET_SIZE = METADATA_LENGTH + DMX_PRO_MAX_PAYLOAD_SIZE;
 
 		private ISerialPortWriter Writer { get; set; }
-		public string Name => Writer?.PortName;
+		public string Name => Writer.PortName;
 
 		public EnttecWriter() : this(new SerialPortWriter())
 		{
@@ -77,10 +77,7 @@ namespace Kadmium_Enttec
 
 		public async ValueTask DisposeAsync()
 		{
-			if (Writer != null)
-			{
-				await Writer.DisposeAsync();
-			}
+			await Writer.DisposeAsync();
 		}
 	}
 }
