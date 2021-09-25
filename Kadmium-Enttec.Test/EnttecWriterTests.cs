@@ -92,5 +92,57 @@ namespace Kadmium_Enttec.Test
 			Assert.Equal(msb, actualMsb);
 			Assert.Equal(lsb, actualLsb);
 		}
+
+		[Fact]
+		public async Task When_CloseIsCalled_Then_ThePortIsClosed()
+		{
+			var serialPortMock = Mock.Of<ISerialPortWriter>(x =>
+				x.CloseAsync() == Task.CompletedTask
+			);
+
+			EnttecWriter writer = new EnttecWriter(serialPortMock);
+			await writer.CloseAsync();
+
+			Mock.Get(serialPortMock).Verify(x => x.CloseAsync());
+		}
+
+		[Fact]
+		public async Task Given_PortIsNotAlreadyOpen_When_OpenIsCalled_Then_ThePortIsOpenedWithTheCorrectSettings()
+		{
+			string serialPort = "/dev/ttys0";
+			var serialPortMock = Mock.Of<ISerialPortWriter>(x =>
+				x.OpenAsync(It.IsAny<string>(), It.IsAny<int>(), Parity.None, 8, StopBits.None) == Task.CompletedTask
+			);
+
+			EnttecWriter writer = new EnttecWriter(serialPortMock);
+			await writer.OpenAsync(serialPort);
+
+			Mock.Get(serialPortMock).Verify(x => x.OpenAsync(serialPort, It.IsAny<int>(), Parity.None, 8, StopBits.One));
+		}
+
+		[Fact]
+		public void When_TheNameIsQueried_Then_ThePortNameIsReturned()
+		{
+			string expected = "Port name";
+			var serialPortMock = Mock.Of<ISerialPortWriter>(x =>
+				x.PortName == expected
+			);
+
+			EnttecWriter writer = new EnttecWriter(serialPortMock);
+			Assert.Equal(expected, writer.Name);
+		}
+
+		[Fact]
+		public async Task When_TheDisposeIsCalled_Then_ThePortDisposeMethodIsCalled()
+		{
+			var serialPortMock = Mock.Of<ISerialPortWriter>(x =>
+				x.DisposeAsync() == new ValueTask()
+			);
+
+			EnttecWriter writer = new EnttecWriter(serialPortMock);
+			await writer.DisposeAsync();
+			Mock.Get(serialPortMock)
+				.Verify(x => x.DisposeAsync());
+		}
 	}
 }
