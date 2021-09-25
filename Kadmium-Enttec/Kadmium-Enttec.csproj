@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Kadmium_Enttec</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>Kadmium Enttec</Title>
+    <Description>A fairly lightweight package for sending DMX data to Enttec Open DMX Pro hardware</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>0.0.1</Version>
+    <Authors>Jesse Higginson</Authors>
+    <PackageProjectUrl>https://github.com/iKadmium/kadmium-enttec</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/iKadmium/kadmium-enttec.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
