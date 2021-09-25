@@ -5,7 +5,6 @@ using System.IO.Ports;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
-[assembly: InternalsVisibleTo("Kadmium-Enttec.Test")]
 namespace Kadmium_Enttec
 {
 	public class EnttecWriter : IEnttecWriter, IAsyncDisposable

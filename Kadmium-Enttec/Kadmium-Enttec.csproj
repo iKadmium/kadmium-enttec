@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+    <InternalsVisibleTo Include="Kadmium-Enttec.Test" />
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
   </ItemGroup>
 
 </Project>
