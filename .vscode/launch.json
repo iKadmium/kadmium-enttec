@@ -10,7 +10,7 @@
 			"request": "launch",
 			"preLaunchTask": "build",
 			// If you have changed target frameworks, make sure to update the program path.
-			"program": "${workspaceFolder}/Kadmium-Enttec.Test/bin/Debug/net5.0/Kadmium-Enttec.Test.dll",
+			"program": "${workspaceFolder}/Kadmium-Enttec.DemoApp/bin/Debug/net6.0/Kadmium-Enttec.DemoApp.dll",
 			"args": [],
 			"cwd": "${workspaceFolder}/Kadmium-Enttec.Test",
 			// For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
