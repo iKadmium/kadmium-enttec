@@ -52,7 +52,7 @@ namespace Kadmium_Enttec
 			Span<byte> packet = new Span<byte>(new byte[packetLength]);
 			packet[0] = DMX_PRO_MESSAGE_START;
 			packet[1] = DMX_PRO_SEND_PACKET;
-			BinaryPrimitives.WriteUInt16BigEndian(packet[2..4], (UInt16)payload.Length);
+			BinaryPrimitives.WriteUInt16LittleEndian(packet[2..4], (UInt16)(payload.Length + 1));
 			packet[4] = DMX_COMMAND_BYTE;
 			payload.CopyTo(packet[5..^1]);
 			packet[^1] = DMX_PRO_MESSAGE_END;

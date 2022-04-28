@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kadmium-Enttec", "Kadmium-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kadmium-Enttec.Test", "Kadmium-Enttec.Test\Kadmium-Enttec.Test.csproj", "{A85475D2-A0C5-4908-8363-EF5071CB21AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kadmium-Enttec.DemoApp", "Kadmium-Enttec.DemoApp\Kadmium-Enttec.DemoApp.csproj", "{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{A85475D2-A0C5-4908-8363-EF5071CB21AA}.Release|x64.Build.0 = Release|Any CPU
 		{A85475D2-A0C5-4908-8363-EF5071CB21AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{A85475D2-A0C5-4908-8363-EF5071CB21AA}.Release|x86.Build.0 = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|x64.Build.0 = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Debug|x86.Build.0 = Debug|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|x64.ActiveCfg = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|x64.Build.0 = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|x86.ActiveCfg = Release|Any CPU
+		{12C2E3BD-5574-41FC-B75E-D3D35CF1FEDD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

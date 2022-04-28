@@ -68,8 +68,8 @@ namespace Kadmium_Enttec.Test
 		}
 
 		[Theory]
-		[InlineData(300, 1, 44)]
-		[InlineData(200, 0, 200)]
+		[InlineData(300, 1, 45)]
+		[InlineData(200, 0, 201)]
 		public async Task Given_PortIsOpen_When_WriteAsyncIsCalled_Then_TheLengthIsCorrect(ushort size, byte msb, byte lsb)
 		{
 			var payload = Enumerable.Repeat((byte)64, size).ToArray();
@@ -87,8 +87,9 @@ namespace Kadmium_Enttec.Test
 			EnttecWriter writer = new EnttecWriter(serialPortMock);
 			await writer.WriteAsync(payload);
 
-			var actualMsb = actual[2];
-			var actualLsb = actual[3];
+			var actualLsb = actual[2];
+			var actualMsb = actual[3];
+
 			Assert.Equal(msb, actualMsb);
 			Assert.Equal(lsb, actualLsb);
 		}
